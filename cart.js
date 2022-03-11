@@ -54,7 +54,12 @@ const cart = [
 */
 
 //CODE HERE
-
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    let finalPrice =  cartTotal * (1 + tax)
+    let priceAfterCoupon = finalPrice - couponValue
+    return priceAfterCoupon 
+}
+// console.log(calcFinalPrice(15,2,.06))
 
 
 //////////////////PROBLEM 3////////////////////
@@ -79,6 +84,10 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
+    Name, to know who it is and to identify the person responsible for the bill -- "String" because it's just a name.
+    Number of people, to know how many are going to be there -- "Number" because all we need is the total number of people.
+    Total Price of Food, to know how much was spent on the food -- "Number" because the total price of anything is usual an integer.
+    Tip, to know how much the party is tipping -- "Number" this is much like total price of food in that it is usually an integer and will be added to the above property.
 
 */
 
@@ -88,3 +97,12 @@ const cart = [
 */
 
 //CODE HERE
+
+const customer = {
+    name: "Todd Crandall",
+    numberOfPeople: 4,
+    totalPrice: 38.60,
+    tip: 5.79
+}
+
+console.log(customer)

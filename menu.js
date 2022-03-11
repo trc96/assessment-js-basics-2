@@ -31,6 +31,14 @@
 */
 
 //CODE HERE
+const pizza = {
+    name: 'Thai Chicken',
+    price: 17,
+    category: 'Gourmet Delite Pizzas',
+    popularity: 4.5,
+    rating: 5,
+    tags: ['Family Size','Thin Crust']
+}
 
 
 
@@ -43,6 +51,7 @@
 */
 
 //CODE HERE
+console.log(pizza.popularity)
 
 
 /*
@@ -53,6 +62,7 @@
 */
 
 //CODE HERE
+console.log(pizza.tags[1])
 
 
 /*
@@ -63,6 +73,9 @@
 */
 
 //CODE HERE
+const {price} = pizza
+console.log(price)
+
 
 
 /*
@@ -73,6 +86,8 @@
 */
 
 //CODE HERE
+const {category} = pizza
+console.log(category)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -88,6 +103,8 @@
 */
 
 //CODE HERE
+
+let foodArr = ['Cowboy', 14, 'Signature Pizzas', 4, 3.5, 'Medium', 'Gluten Free']
 
 
 
@@ -105,7 +122,11 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const cb = tags => foodArr.includes(tags)
+
+const filteredFood = foodArr.filter(cb)
+console.log(filteredFood)
+
 
 
 
