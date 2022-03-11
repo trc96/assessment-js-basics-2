@@ -35,8 +35,8 @@ const pizza = {
     name: 'Thai Chicken',
     price: 17,
     category: 'Gourmet Delite Pizzas',
-    popularity: 4.5,
-    rating: 5,
+    popularity: 9,
+    rating: 10,
     tags: ['Family Size','Thin Crust']
 }
 
@@ -104,7 +104,48 @@ console.log(category)
 
 //CODE HERE
 
-let foodArr = ['Cowboy', 14, 'Signature Pizzas', 4, 3.5, 'Medium', 'Gluten Free']
+const foodArr = [
+{
+    name: 'Mac and Cheese',
+    price: 8,
+    category: 'American',
+    popularity: 8,
+    rating: 8,
+    tags: ['kids', 'popular']
+},
+{
+    name: 'Chicken Wings',
+    price: 10,
+    category: 'American',
+    popularity: 7,
+    rating: 7.5,
+    tags: ['boneless','finger food']
+},
+{
+    name: 'Salmon',
+    price: 15,
+    category: 'Sea Food',
+    popularity: 9,
+    rating: 8.5,
+    tags: ['fish','fancy']
+},
+{
+    name: 'Steak',
+    price: 18,
+    category: 'Steak Dinner',
+    popularity: 9.5,
+    rating: 8.5,
+    tags: ['8oz','popular']
+},
+{
+    name: 'Spagetti',
+    price: 6,
+    category: 'Italian',
+    popularity: 7,
+    rating: 7,
+    tags: ['kids','popular']
+}
+];
 
 
 
@@ -122,9 +163,9 @@ let foodArr = ['Cowboy', 14, 'Signature Pizzas', 4, 3.5, 'Medium', 'Gluten Free'
 
 //CODE HERE
 
-const cb = tags => foodArr.includes(tags)
+// const cb = tags => foodArr.includes(tags)
 
-const filteredFood = foodArr.filter(cb)
+const filteredFood = foodArr.filter(item => item.tags.includes('popular'))
 console.log(filteredFood)
 
 
@@ -170,6 +211,16 @@ console.log(filteredFood)
 */
 
 //CODE HERE
+const filterByProperty = (property, number, type) => {
+    let filteredArr = foodArr.filter(item => {
+        if (type === 'above') {
+            return item[property] > number
+        } else {
+            return item[property] < number
+        }
+    })
+    return filteredArr
+}
 
 
 /*
@@ -180,3 +231,4 @@ console.log(filteredFood)
 */
 
 //CODE HERE
+console.log(filterByProperty('price', 10, 'above'))
